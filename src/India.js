@@ -53,10 +53,10 @@ function India() {
           <Card.Text>Delta deaths - {data.deltadeaths}</Card.Text>
           <Card.Text>Recovered - {data.recovered}</Card.Text>
           <Card.Text>Delta recovered - {data.deltarecovered}</Card.Text>
-          {data.statenotes !== "" ? <Card.Title>State Notes</Card.Title> : null}
+          {/* {data.statenotes !== "" ? <Card.Title>State Notes</Card.Title> : null}
           {data.statenotes !== "" ? (
             <Card.Text>{ReactHtmlParser(data.statenotes)}</Card.Text>
-          ) : null}
+          ) : null} */}
           <Button variant="primary" className="buttons">
             <Link to={`/india/${data.state}`}>View districts status</Link>
           </Button>
