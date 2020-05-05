@@ -4,8 +4,6 @@ import { CardDeck, Card, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Columns from "react-columns";
-import ReactHtmlParser from "react-html-parser";
-import { Link, useHistory } from "react-router-dom";
 
 function Home() {
   const [latest, setLatest] = useState([]);
@@ -49,16 +47,18 @@ function Home() {
         <Card.Img variant="top" src={data.countryInfo.flag} />
         <Card.Body>
           <Card.Title>{data.country}</Card.Title>
-          <Card.Text>Cases {data.cases}</Card.Text>
-          <Card.Text>Recovered {data.recovered}</Card.Text>
-          <Card.Text>Deaths {data.deaths}</Card.Text>
-          <Card.Text>Today's cases {data.todayCases}</Card.Text>
-          <Card.Text>Today's deaths {data.todayDeaths}</Card.Text>
-          <Card.Text>Active {data.active}</Card.Text>
-          <Card.Text>Critical {data.critical}</Card.Text>
+          <Card.Text>Cases - {data.cases}</Card.Text>
+          <Card.Text>Recovered - {data.recovered}</Card.Text>
+          <Card.Text>Deaths - {data.deaths}</Card.Text>
+          <Card.Text>Today's cases - {data.todayCases}</Card.Text>
+          <Card.Text>Today's deaths - {data.todayDeaths}</Card.Text>
+          <Card.Text>Active - {data.active}</Card.Text>
+          <Card.Text>Critical - {data.critical}</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small>Last updated {lastUpdated}</small>
+          <small>Last updated</small>
+          <br />
+          <small>{lastUpdated}</small>
         </Card.Footer>
       </Card>
     );

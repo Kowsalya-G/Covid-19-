@@ -38,8 +38,10 @@ function States({ match }) {
     const data = d[1];
     return (
       <Card key={i} bg="light" text="dark" className="text-center card">
+        <Card.Header style={{ fontWeight: "bold", fontSize: "larger" }}>
+          {d[0]}
+        </Card.Header>
         <Card.Body>
-          <Card.Title>{d[0]}</Card.Title>
           <Card.Text>Active Cases - {data.active}</Card.Text>
           <Card.Text>Confirmed Cases - {data.confirmed}</Card.Text>
           <Card.Text>Delta confirmed - {data.delta.confirmed}</Card.Text>

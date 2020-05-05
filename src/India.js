@@ -10,7 +10,7 @@ import { Link, useHistory } from "react-router-dom";
 function India() {
   const [total, setTotal] = useState({});
   const [results, setResults] = useState([]);
-  const [searchCountry, setSearchCountry] = useState("");
+  const [searchState, setSearchState] = useState("");
   useEffect(() => {
     axios
       .get("https://api.covid19india.org/data.json")
@@ -35,22 +35,24 @@ function India() {
   ];
   const history = useHistory();
   const filterState = results.filter((item) => {
-    return searchCountry !== ""
-      ? item.state.toLowerCase().includes(searchCountry.toLowerCase())
+    return searchState !== ""
+      ? item.state.toLowerCase().includes(searchState.toLowerCase())
       : item;
   });
   const statesOfIndia = filterState.map((data, i) => {
     return (
       <Card key={i} bg="light" text="dark" className="text-center card">
+        <Card.Header style={{ fontWeight: "bold", fontSize: "larger" }}>
+          {data.state}
+        </Card.Header>
         <Card.Body>
-          <Card.Title>{data.state}</Card.Title>
-          <Card.Text>Active Cases {data.active}</Card.Text>
-          <Card.Text>Confirmed Cases {data.confirmed}</Card.Text>
-          <Card.Text>Delta confirmed {data.deltaconfirmed}</Card.Text>
-          <Card.Text>Deaths {data.deaths}</Card.Text>
-          <Card.Text>Delta deaths {data.deltadeaths}</Card.Text>
-          <Card.Text>Recovered {data.recovered}</Card.Text>
-          <Card.Text>Delta recovered {data.deltarecovered}</Card.Text>
+          <Card.Text>Active Cases - {data.active}</Card.Text>
+          <Card.Text>Confirmed Cases - {data.confirmed}</Card.Text>
+          <Card.Text>Delta confirmed - {data.deltaconfirmed}</Card.Text>
+          <Card.Text>Deaths - {data.deaths}</Card.Text>
+          <Card.Text>Delta deaths - {data.deltadeaths}</Card.Text>
+          <Card.Text>Recovered - {data.recovered}</Card.Text>
+          <Card.Text>Delta recovered - {data.deltarecovered}</Card.Text>
           {data.statenotes !== "" ? <Card.Title>State Notes</Card.Title> : null}
           {data.statenotes !== "" ? (
             <Card.Text>{ReactHtmlParser(data.statenotes)}</Card.Text>
@@ -118,7 +120,7 @@ function India() {
           <Form.Control
             type="text"
             placeholder="Search state"
-            onChange={(e) => setSearchCountry(e.target.value)}
+            onChange={(e) => setSearchState(e.target.value)}
           />
         </Form.Group>
       </Form>
