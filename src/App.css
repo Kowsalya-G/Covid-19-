@@ -1,11 +1,67 @@
-.CardDeck{
+.CardDeck {
   margin-right: 0px !important;
   margin-left: 0px !important;
   padding-top: 30px;
 }
-.card{
+.card {
   margin: 10px;
 }
-.main{
+.main {
   background-color: lightgoldenrodyellow;
+}
+
+nav {
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  color: black;
+}
+
+.covid-header {
+  width: 80%;
+  padding-left: 30px;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 35%;
+  align-items: center;
+  text-align: right;
+  list-style: none;
+  text-decoration-color: black !important;
+  font-family: "Oxygen", sans-serif;
+}
+
+.nav-links > a {
+  padding: 5px;
+  font-family: "Oxygen", sans-serif;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: lightgray;
+}
+.nav-links > a:hover {
+  background-color: none;
+  color: black;
+  text-decoration: none;
+}
+
+.buttons > a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttons > a:hover {
+  background-color: none;
+  color: white;
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Oxygen", sans-serif;
 }
