@@ -4,7 +4,7 @@ import { CardDeck, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Columns from "react-columns";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./Nav";
 import India from "./India";
 import States from "./States";
