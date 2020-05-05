@@ -19,7 +19,7 @@ nav {
 }
 
 .covid-header {
-  width: 65%;
+  width: 60%;
   padding-left: 30px;
   font-weight: bold;
   /* text-align: center; */
@@ -28,7 +28,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-evenly;
-  width: 35%;
+  width: 40%;
   align-items: center;
   text-align: right;
   list-style: none;
