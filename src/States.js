@@ -70,7 +70,7 @@ function States({ match }) {
       </h3>
       <br />
       <Form style={{ margin: "10px" }}>
-        <Form.Group controlId="formGroupSearch">
+        <Form.Group controlId="formGroupDistict">
           <Form.Control
             type="text"
             placeholder="Search district"

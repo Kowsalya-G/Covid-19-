@@ -10,7 +10,7 @@ import { Link, useHistory } from "react-router-dom";
 function India() {
   const [total, setTotal] = useState({});
   const [results, setResults] = useState([]);
-  const [searchState, setSearchState] = useState("");
+  const [searchCountry, setSearchCountry] = useState("");
   useEffect(() => {
     axios
       .get("https://api.covid19india.org/data.json")
@@ -35,8 +35,8 @@ function India() {
   ];
   const history = useHistory();
   const filterState = results.filter((item) => {
-    return searchState !== ""
-      ? item.state.toLowerCase().includes(searchState.toLowerCase())
+    return searchCountry !== ""
+      ? item.state.toLowerCase().includes(searchCountry.toLowerCase())
       : item;
   });
   const statesOfIndia = filterState.map((data, i) => {
@@ -114,11 +114,11 @@ function India() {
       </CardDeck>
       <br />
       <Form style={{ margin: "10px" }}>
-        <Form.Group controlId="formGroupSearch">
+        <Form.Group controlId="formGroupState">
           <Form.Control
             type="text"
             placeholder="Search state"
-            onChange={(e) => setSearchState(e.target.value)}
+            onChange={(e) => setSearchCountry(e.target.value)}
           />
         </Form.Group>
       </Form>
