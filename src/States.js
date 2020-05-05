@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { Card, Form, Button } from "react-bootstrap";
+import { Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Columns from "react-columns";
 import { useHistory } from "react-router-dom";

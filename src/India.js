@@ -4,7 +4,7 @@ import { CardDeck, Card, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import Columns from "react-columns";
-import ReactHtmlParser from "react-html-parser";
+// import ReactHtmlParser from "react-html-parser";
 import { Link, useHistory } from "react-router-dom";
 
 function India() {
